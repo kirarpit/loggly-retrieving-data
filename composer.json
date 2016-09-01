@@ -1,0 +1,26 @@
+{
+  "name": "kirarpit/loggly-retrieving-data",
+  "type": "library",
+  "description": "Loggly retrieving data library for PHP",
+  "keywords": ["loggly", "retrieving data API", "loggly API", "loggly PHP", "loggly Search"],
+  "homepage": "https://github.com/kirarpit/loggly-retrieving-data",
+  "license": "MIT",
+  "time": "2016-08-31",
+  "authors": [
+    {
+      "name": "Arpit Garg",
+      "email": "iarpitgarg@gmail.com",
+      "homepage": "https://github.com/kirarpit",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.2.0",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "kirarpit\\logglyRetrievingData\\": "src"
+    }
+  }
+}
