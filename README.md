@@ -1,11 +1,15 @@
-# Loggly Event Retrieval API
-> Loggly retrieving data API library for PHP
+# Loggly Event Retrieval API Library
+> loggly-retrieving-data is the PHP library of [Loggly Retrieving Data API](https://www.loggly.com/docs/api-retrieving-data/).
 
 ## Installation
 `composer require kirarpit/loggly-retrieving-data`
 
 ## Usage
-The library could be used to search for events or filter by field across all log events. The “Search” & “Event” endpoints will work together to return a set of your events and counts as described in the [Loggly Retrieving Data API](https://www.loggly.com/docs/api-retrieving-data/).
+Anything which can be searched on Loggly Search Panel could be queried here and the resulted events would be returned along with the total number of such events.
+
+The must defined parameters for a search are 'query', 'from_timestamp' and 'to_timestamp', rest are optional.
+
+Optional size parameter in the query defines the number of events fetched in a single page. The maximum value it can take is 5000, after which another curl request is to be made with shorter duration as described in the [Loggly Retrieving Data API](https://www.loggly.com/docs/api-retrieving-data/), which is automatically handled by the library under the hood.
 
 ```php
 <?php
